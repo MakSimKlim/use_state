@@ -36,13 +36,26 @@ function Tasklist()
         setTasks(newTask);
     }
 
+    let doneTask = index =>
+    {
+        let newTask = [...tasks];
+        newTask[index].done = !newTask[index].done;
+        setTasks(newTask);
+    }
+    let deleteTask = index =>
+    {
+        let newTask = [...tasks];
+        newTask.splice(index,1);
+        setTasks(newTask);
+    }
+
     return(
         <div className="task-list">
             {
                 tasks.map
                 (
                     (task,index) => (
-                        <Task key={index} task={task}/>
+                        <Task key={index} task={task} index={index} doneTask={doneTask} deleteTask={deleteTask}/>
                     )
                 )
             }

@@ -4,7 +4,7 @@ import './Modal.css';
 function Modal()
 {
     let [open, setOpen] = useState(false);
-    let image = "https://c4.wallpaperflare.com/wallpaper/958/457/87/band-music-metallica-wallpaper-preview.jpg";
+    let image = "https://abrakadabra.fun/uploads/posts/2021-12/1640972273_17-abrakadabra-fun-p-metallika-emblema-38.jpg";
 
     return(
         <div>
